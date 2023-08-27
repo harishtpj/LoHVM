@@ -9,7 +9,7 @@ def clean(c):
     c.run("IF EXIST hvm\\__pycache__ (del /s /q hvm\\__pycache__ && rmdir hvm\\__pycache__)")
     print("Directory cleaned.")
 
-@task(post=[clean], default=True)
+@task(default=True)
 def run(c):
     """Run the virtual machine."""
     print("Running the virtual machine...")
